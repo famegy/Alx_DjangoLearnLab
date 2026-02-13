@@ -5,14 +5,18 @@
 ```python
 from bookshelf.models import Book
 
-books = Book.objects.all()
-    for book in books:
+books = Book.objects.get(title="1984")
+books.title
+books.author    
+books.publication_year
 
 ```
 
 ## expected output:
 
 ```python
-    <QuerySet [<Book: 1984>]>
+'1984'
+'George Orwell'
+1949
 ```
 

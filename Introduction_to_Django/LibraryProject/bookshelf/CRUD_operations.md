@@ -26,12 +26,19 @@ The book instance was successfully created and saved to the database.
 ## 2️⃣ RETRIEVE
 
 ```python
-Book.objects.all()
+books = Book.objects.get(title="1984")
+books.title
+books.author    
+books.publication_year
+
 ```
 
-Output:
-```
-<QuerySet [<Book: 1984>]>
+## expected output:
+
+```python
+'1984'
+'George Orwell'
+1949
 ```
 
 The book record was successfully retrieved.

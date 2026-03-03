@@ -21,7 +21,7 @@ class Library(models.Model):
     def __str__(self):
         return self.name
       
-class Librarian(models.model):
+class Librarian(models.Model):
     name = models.CharField(max_length=100)
     Library = models.OneToOneField(Library)
     
